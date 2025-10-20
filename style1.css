@@ -1,15 +1,29 @@
 
-body{
+html {
+    height: 100%; 
+    scroll-behavior: smooth;
+}
+body {
+    
+    display: flex;         
+    flex-direction: column; 
+    min-height: 100vh;     
+    margin: 0;             
+    
+    
     background-image: url('background.png');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
 }
-html {
-    scroll-behavior: smooth;
+main {
+    flex-grow: 1;
 }
+
+
+
+
 .navbar {
     background-color: pink;
     padding: 10px 20px; 
@@ -22,7 +36,6 @@ html {
     justify-content: flex-start; 
     align-items: center; 
 }
-
 
 .logo-container {
     display: flex;
@@ -40,7 +53,6 @@ html {
 
 
 .logo-text {
-  
     transform: translateY(-1px);
     display: inline-block; 
     
@@ -55,7 +67,7 @@ nav ul {
     list-style-type: none; 
     padding: 0;
     margin-left: auto; 
-    margin-right: 0; 
+    margin-right: 20px; 
 }
 
 nav ul li {
@@ -69,15 +81,17 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; 
-    color: white;  
+    color: #FF0077;  
     transition: color 0.3s ease, transform 0.1s ease-out;
     display: inline-block; 
 }
 
 nav ul li a:hover {
-    color: #FF0077;
+    color: white;
     transform: translateY(-3px); 
 }
+
+
 
 .product-grid {
     display: flex;
@@ -123,11 +137,11 @@ nav ul li a:hover {
 }
 
 #home-content {
-    height: 120vh; 
+    height: 120vh;
     padding-top: 50px; 
 }
 #about-section {
-    height: 120vh; 
+    height: 120vh;
     padding-top: 70px; 
 }
 #about-section h2{
@@ -140,12 +154,17 @@ nav ul li a:hover {
     background-color: pink;
 }
 #product-section {
-    height: 120vh; 
+    height: 120vh;
     padding-top: 50px; 
 }
+
+
 #contact-section {
-    height: 120vh; 
     padding-top: 50px; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
 }
 .contact-link {
     text-decoration: none; 
@@ -155,4 +174,14 @@ nav ul li a:hover {
 }
 .contact-link:hover {
     text-decoration: underline;
+}
+
+
+footer{
+    background-color: pink;
+    color: #FF0077;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    flex-shrink: 0;
 }
